@@ -2,7 +2,7 @@
 
 Spinning Circle animation, in pride colors.
 
-**Requires DrawSVGPlugin.min.js**
+**Requires DrawSVGPlugin.min.js to run**
 
 
 
