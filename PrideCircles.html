@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pride Circle</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+    <script src="DrawSVGPlugin.min.js"></script>
+    <style type ="text/css">
+        body{
+            background-color: #36393e;
+        }
+        #mainCont{
+            border-style: solid;
+            width: 400px;
+            height: 350px;
+            background-color:palegoldenrod;
+        }
+        .line1{
+            fill:rgb(228, 3, 3);
+            stroke-width: 1px;
+        }
+        .line2{
+            fill:rgb(255, 140, 0);
+            stroke-width: 1px;
+        }
+        .line3{
+            fill:rgb(255, 237, 0);
+            stroke-width: 1px;
+        }
+        .line4{
+            fill:rgb(0, 128, 38);
+            stroke-width: 1px;
+        }
+        .line5{
+            fill:rgb(36, 64, 142);
+            stroke-width: 1px;
+        }
+        .line6{
+            fill:rgb(115, 41, 130);
+            stroke-width: 1px;
+        }
+        .line7{
+            fill:rgb(255,255,255);
+            stroke-width: 1px;
+        }
+        .line8{
+            fill:rgb(255, 175, 200);
+            stroke-width: 1px;
+        }
+        .line9{
+            fill:rgb(116, 215, 238);
+            stroke-width: 1px;
+        }
+        .line10{
+            fill:rgb(97, 57, 21);
+            stroke-width: 1px;
+        }
+        .line11{
+            fill:rgb(black);
+            stroke-width: 1px;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="mainCont">
+        <svg viewBox = "0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+         <rect class = "line1" x="100" y="35" width="3" height="100"/>
+        <rect class = "line2" x="100" y="35" width="3" height="100"/>
+        <rect class = "line3" x="100" y="35" width="3" height="100"/>
+        <rect class = "line4" x="100" y="35" width="3" height="100"/>
+        <rect class = "line5" x="100" y="35" width="3" height="100"/>
+        <rect class = "line6" x="100" y="35" width="3" height="100"/>
+        <rect class = "line7" x="100" y="35" width="3" height="100"/>
+        <rect class = "line8" x="100" y="35" width="3" height="100"/>
+        <rect class = "line9" x="100" y="35" width="3" height="100"/>
+        <rect class = "line10" x="100" y="35" width="3" height="100"/>
+        <rect class = "line11" x="100" y="35" width="3" height="100"/>
+        <circle class="circ" cx="100" cy="85" r="50" stroke="grey" stroke-width="4" fill="none"/>
+        <circle class="circFill" cx="115" cy="100" r="50" transform="rotate(-90 100 100)" stroke="red" stroke-width="4" fill="none"/>
+    </svg>
+    </div>
+    <script type="text/javascript">
+        let tl = gsap.timeline();
+        gsap.set(".line1,.line2,.line3,.line4,.line5,.line6,.line7,.line8,.line9,.line10,.line11",{transformOrigin:"50% 50%"});
+        tl.to(".line1",{duration: 3, rotation: 360, repeat:-1,ease: Linear.easeNone})
+          .to(".line2",{duration: 3, rotation: 360, repeat:-1,ease: Linear.easeNone},"-=2.73")
+          .to(".line3",{duration: 3, rotation: 360, repeat:-1,ease: Linear.easeNone},"-=2.73")
+          .to(".line4",{duration: 3, rotation: 360, repeat:-1,ease: Linear.easeNone},"-=2.73")
+          .to(".line5",{duration: 3, rotation: 360, repeat:-1,ease: Linear.easeNone},"-=2.73")
+          .to(".line6",{duration: 3, rotation: 360, repeat:-1,ease: Linear.easeNone},"-=2.73")
+          .to(".line7",{duration: 3, rotation: 360, repeat:-1,ease: Linear.easeNone},"-=2.73")
+          .to(".line8",{duration: 3, rotation: 360, repeat:-1,ease: Linear.easeNone},"-=2.73")
+          .to(".line9",{duration: 3, rotation: 360, repeat:-1,ease: Linear.easeNone},"-=2.73")
+          .to(".line10",{duration: 3, rotation: 360, repeat:-1,ease: Linear.easeNone},"-=2.73")
+          .to(".line11",{duration: 3, rotation: 360, repeat:-1,ease: Linear.easeNone},"-=2.73")
+        gsap.from('.circFill', 3, {drawSVG: '0%', ease: Linear.easeNone, repeat:-1});
+    </script>
+</body>
+</html>
